@@ -1,0 +1,18 @@
+PROCEDURE "updateData" ( 
+	in COMP NVARCHAR(100),
+	in EMAILADD NVARCHAR(50)
+) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	--DEFAULT SCHEMA <default_schema_name>
+	--READS SQL DATA AS
+	AS -- "READS SQL DATA " removed  
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+update
+	"ZCHATBOT"
+	set EMAILADDRESS = EMAILADD
+	Where COMPANY = COMP;
+END;
