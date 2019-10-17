@@ -136,7 +136,7 @@ module.exports = function () {
 					}
 				} catch (e) {
 					console.log(e);
-					sendTextReply(res, "There is an error occured");
+					sendTextReply(res, "An error has occurred");
 				}
 			}
 		}
